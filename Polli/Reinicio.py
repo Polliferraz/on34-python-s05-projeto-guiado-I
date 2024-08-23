@@ -128,7 +128,8 @@ def consultar_notas_aluna():
 def consultar_status_aprovacao():
     nome = str(input('Nome da aluna: '))
     sobrenome = str(input('Sobrenome da aluna: '))
-    if (nome, sobrenome) in dataset:
+    chave_aluna = (nome, sobrenome)
+    if chave_aluna in dataset:
         notas = dataset[(nome, sobrenome)]['Notas']
         media = (sum(notas)) / len(notas)     
         faltas = dataset[(nome, sobrenome)]["Presença"].count(False)
