@@ -50,7 +50,24 @@ def incluir_nova_aluna():
     nome = str(input("Nome da aluna: ")) #Recebo nome da aluna
     sobrenome = str(input("Sobrenome da aluna: ")) #Recebo sobrenome da aluna
     turma = int(input("Turma da aluna (nº): ")) #Recebo nome a turma
-    lista_notas = (input('Digite as notas da aluna separadas por vírgula: '))
+    lista_notas = obter_notas()
+    
+def obter_notas():
+    quantidade_notas = int(input('Quantas notas serão calculadas?: '))
+    notas = []
+    for contador in range(quantidade_notas):
+        while True: 
+            entrada = input(f'Nota do #{contador + 1}: ')
+            try:
+                nota = float(entrada)
+                notas.append(nota)
+                break
+            except ValueError:
+                print('Erro em processar o valor. Insira um número válido')
+
+    return notas
+    
+    
     lista_presenca = obter_presença()
 
 def obter_presença():
