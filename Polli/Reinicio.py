@@ -51,7 +51,22 @@ def incluir_nova_aluna():
     sobrenome = str(input("Sobrenome da aluna: ")) #Recebo sobrenome da aluna
     turma = int(input("Turma da aluna (nº): ")) #Recebo nome a turma
     lista_notas = (input('Digite as notas da aluna separadas por vírgula: '))
-    lista_presenca = bool(input('Digite True para a presença da aluna e False para a sua ausência: '))    
+    lista_presenca = obter_presença()
+
+def obter_presença():
+    quantidade_aulas = int(input('Digite quantas aulas houveram: '))
+    lista_presença = []
+
+    for contador in range(quantidade_aulas):
+        while True:
+            entrada = input(f'Presença na aula #{contador +1} (True/False): ')
+            if entrada in ['True', 'False']:
+                lista_presença.append(eval(entrada))
+                break
+            else:
+                print('Informação inválida. Insira apenas True ou False')
+
+    return lista_presença
     nota_participacao = (input("Participação da aluna: ")) #Recebo nota de participação
     print('Aluna adicionada com sucesso!' )
     
