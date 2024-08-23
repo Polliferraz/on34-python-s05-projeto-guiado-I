@@ -120,9 +120,8 @@ def consultar_notas_aluna():
     nome = str(input('Nome da aluna: '))
     sobrenome = str(input('Sobrenome da aluna: '))    
     if (nome, sobrenome) in dataset:
-        notas = dataset[(nome, sobrenome)]['Notas']
-        media = sum(notas) / len(notas)       
-        print(f'Notas da {nome}: {notas}')
+        notas = dataset[chave]["Notas"]
+        print(f'A aluna {nome} {sobrenome} está com as notas: {notas}')
         return media
     else:
         print('Aluna não encontrada')   
