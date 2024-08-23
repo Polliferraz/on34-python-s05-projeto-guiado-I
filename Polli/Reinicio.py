@@ -122,7 +122,6 @@ def consultar_notas_aluna():
     if (nome, sobrenome) in dataset:
         notas = dataset[chave]["Notas"]
         print(f'A aluna {nome} {sobrenome} está com as notas: {notas}')
-        return media
     else:
         print('Aluna não encontrada')   
     
