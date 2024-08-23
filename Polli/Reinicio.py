@@ -89,7 +89,8 @@ def obter_presença():
     
     
     # Armazeno os dados da aluna no dicionário dataset
-    dataset[nome] = {
+    chave_aluna = (nome, sobrenome)
+    dataset[chave] = {
         'sobrenome': sobrenome,
         'turma': turma,
         'lista_presenca': lista_presenca,
