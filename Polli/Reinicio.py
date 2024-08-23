@@ -67,7 +67,7 @@ def obter_presença():
                 print('Informação inválida. Insira apenas True ou False')
 
     return lista_presença
-    nota_participacao = (input("Participação da aluna: ")) #Recebo nota de participação
+    nota_participacao = float(input("Participação da aluna: ")) #Recebo nota de participação
     print('Aluna adicionada com sucesso!' )
     
     
