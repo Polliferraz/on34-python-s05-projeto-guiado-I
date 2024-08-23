@@ -49,7 +49,7 @@ def incluir_nova_aluna():
     print("Insira os seguintes dados: ")
     nome = str(input("Nome da aluna: ")) #Recebo nome da aluna
     sobrenome = str(input("Sobrenome da aluna: ")) #Recebo sobrenome da aluna
-    turma = int(input("Turma da aluna (nº): ")) #Recebo nome a turma
+    turma = input("Turma da aluna (nº): ") #Recebo nome a turma
     lista_notas = obter_notas()
     
 def obter_notas():
