@@ -100,8 +100,8 @@ def obter_presença():
     print('Aluna adicionada com sucesso!')
 
 def consultar_lista_alunas():
-    lista_alunas = dataset
-    print(lista_alunas.keys())
+    for nome, sobrenome in dataset.keys():
+        print(f'- {nome} {sobrenome}')
     return lista_alunas
 
 def consultar_faltas_aluna():
