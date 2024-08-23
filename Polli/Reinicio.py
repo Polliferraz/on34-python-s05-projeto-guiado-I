@@ -92,10 +92,10 @@ def obter_presença():
     chave_aluna = (nome, sobrenome)
     dataset[chave] = {
         'sobrenome': sobrenome,
-        'turma': turma,
-        'lista_presenca': lista_presenca,
-        'lista_notas': lista_notas,
-        'nota_participacao': nota_participacao
+        "Turma": turma,
+        "Notas": lista_notas,
+        "Presença": lista_presenca,
+        "Participação": nota_participacao
     }
     print('Aluna adicionada com sucesso!')
 
