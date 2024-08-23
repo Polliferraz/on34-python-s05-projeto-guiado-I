@@ -102,7 +102,6 @@ def obter_presença():
 def consultar_lista_alunas():
     for nome, sobrenome in dataset.keys():
         print(f'- {nome} {sobrenome}')
-    return lista_alunas
 
 def consultar_faltas_aluna():
     nome = str(input("Nome da aluna: ")) #Recebo nome da aluna
